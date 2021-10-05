@@ -1,5 +1,5 @@
 <html>
-V.0.1.7
+V.0.2.2
 <h2 align=center>T1A05-Input-Output-by-Adamk.html</h2>
 <br>
 <a href="https://www.W3schools.com/jsref/prop_html_innerhtml.asp">Input/Output reference material Javascript innerHTML value by Adamk</a>
@@ -17,7 +17,45 @@ document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*m
 <div id="myDiv01">Haha</div>
 <head>
 <style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 
 
@@ -27,8 +65,8 @@ document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*m
 </head>
 
 <body>
-
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
 </body>
-
+</html>
 
 
