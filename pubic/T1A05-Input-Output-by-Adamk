@@ -1,5 +1,5 @@
 <html>
-V.0.2.2
+V.0.4.2
 <h2 align=center>T1A05-Input-Output-by-Adamk.html</h2>
 <br>
 <a href="https://www.W3schools.com/jsref/prop_html_innerhtml.asp">Input/Output reference material Javascript innerHTML value by Adamk</a>
@@ -59,12 +59,59 @@ document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*m
 
 
 
+<br>
 
+
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
 
 </style>
 </head>
 
 <body>
+
+<div class="container">
+  <img src="img_lights.jpg" alt="Snow" style="width:100%">
+  <button class="btn">Button</button>
+</div>
+
+
+
+
+
+
+
 <button class="button" style="vertical-align:middle"><span>Hover </span></button>
 </body>
 </html>
