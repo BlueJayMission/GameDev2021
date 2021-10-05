@@ -1,0 +1,30 @@
+V.0.1.2
+<h2 align=center>T1A05-Input-Output-by-Adamk.html</h2>
+<br>
+<a href="https://www.W3schools.com/jsref/prop_html_innerhtml.asp">Input/Output reference material Javascript innerHTML value by Adamk</a>
+<br>
+<h4> Example Input/Output code</h4>
+<pre> 
+  let myIn01 = document.getElementById('myNum01').value
+  document.getElementById('myDiv01').innerHTML = myIn01 + '
+squared = ' + myIn01*myIn01
+</pre>
+<h4>Example code</h4>
+<input id="myNum01" type=number value="4" ><br>
+<input type=button value="myEvent squares" onclick="{let myIn01 = document.getElementById('myNum01').value
+document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*myIn01}"><br>
+<div id="myDiv01">Haha</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
