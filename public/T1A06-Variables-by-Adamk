@@ -1,14 +1,17 @@
 <html>
-V.0.0.2
+V.0.0.5
 <h1 align=center>T1A06-Variables-by-Adamk.html</h1>
 <head>
 <style>
+:root {
+  --magenta: #e12a9f;
+  --white: #ffffff;
+  --lightblue: #aaeaea;
+}
 
-
-
-
-
-
+body {
+  background-color: var(--magenta);
+}
 
 
 
