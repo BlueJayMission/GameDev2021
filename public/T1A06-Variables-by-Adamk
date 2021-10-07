@@ -1,5 +1,5 @@
 <html>
-V.0.0.9
+V.0.1.4
 <h1 align=center>T1A06-Variables-by-Adamk.html</h1>
 <head>
 <style>
@@ -19,20 +19,22 @@ h2 {
 
 
 .container {
-  color: var(--blue);
+  color: var(--lightblue);
   background-color: var(--white);
   padding: 15px;
 }
 </style>
 </head>
 <body>
-
-
-
-
-
-
-
+<div class="container">
+  <h2>Variables are cool</h2>
+  <p>I am text</p>
+  <p>I am too!</p>
+  <p>
+    <button>Yes</button>
+    <button>No</button>
+  </p>
+</div>
 
 
 
