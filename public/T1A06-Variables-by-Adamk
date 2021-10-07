@@ -1,5 +1,5 @@
 <html>
-V.0.0.5
+V.0.0.9
 <h1 align=center>T1A06-Variables-by-Adamk.html</h1>
 <head>
 <style>
@@ -13,8 +13,16 @@ body {
   background-color: var(--magenta);
 }
 
+h2 {
+  border-bottom: 2px solid var(--lightblue);
+}
 
 
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
 </style>
 </head>
 <body>
