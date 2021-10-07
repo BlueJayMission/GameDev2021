@@ -23,6 +23,12 @@ h2 {
   background-color: var(--white);
   padding: 15px;
 }
+button {
+  background-color: var(--magenta);
+  color: var(--lightblue);
+  border: 1px solid var(--lightblue);
+  padding: 5px;
+}
 </style>
 </head>
 <body>
