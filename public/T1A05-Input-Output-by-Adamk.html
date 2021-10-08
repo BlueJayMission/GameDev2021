@@ -15,7 +15,21 @@ squared = ' + myIn01*myIn01
 <input type=button value="myEvent squares" onclick="{let myIn01 = document.getElementById('myNum01').value
 document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*myIn01}"><br>
 <div id="myDiv01">Haha</div>
-<head>
+
+value1 = <input type="text" id="value1" name="value1" value=""/>
+value2 = <input type="text" id="value2" name="value2" value=""/>  
+<script language="javascript">
+	function addNumbers()
+	{
+		var val1 = parseInt(document.getElementById("value1").value);
+		var val2 = parseInt(document.getElementById("value2").value);
+		var ansD = document.getElementById("answer");
+		ansD.value = val1 + val2;
+	}
+</script>  
+  
+  
+  <head>
 <style>
 
 
