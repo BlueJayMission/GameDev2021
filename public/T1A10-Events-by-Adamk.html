@@ -19,9 +19,9 @@ document.getElementById('myText01').value
 <br>
   
   
-<input type=text id="myKeys01" value="Type here">
+<input type=text onkeypress="myKeys01" value="Type here">
 <b id="keys" onKeypress="{
-  document.getElementById('keys').innerHTML = 'I'm a sentence'
+  document.getElementById('myKeys01').innerHTML = 'I'm a sentence'
                        }"   >Press a key</b>
          
          
