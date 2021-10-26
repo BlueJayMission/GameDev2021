@@ -19,12 +19,12 @@ document.getElementById('myText01').value
 <br>
   
   
-<input type=text onkeypress="myKeys01" value="Type here">
-<b id="keys" onKeypress="{
+<input type=text id="myKeys01" value="Write something here"><br>
+<input type=text value="Type here" onKeypress="{
   document.getElementById('keys').innerHTML = 
-document.getElementById('myKeys0').value'I'm a sentence'
-                       }"   >Press a key</b>
-         
+document.getElementById('myKeys01').value
+}">
+  <div id="keys">This changes</div>
          
          
          
