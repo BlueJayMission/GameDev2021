@@ -1,1 +1,29 @@
 V.0.0.1
+<html>
+  <head>
+    <h2 align=center>T1A08-Loops-By-Adamk.html</h2>
+<a href="https://www.w3schools.com/js/js_loop_for.asp#:~:text=JavaScript%20supports%20different%20kinds%20of%20loops%3A%201%20for,of%20code%20while%20a%20specified%20condition%20is%20true" target ="_self">https://www.w3schools.com/js/js_loop</a>
+  </head>
+  <body>
+    <h4>Example working code</h4>
+ Max loops: <input id="myNum01" type=number value="4"><br>
+    
+<input type=button value="Basic For loop with decisions" onclick="{
+   document.getElementById('myDiv01').innerHTML = ''
+   let myTemp = ''
+   let myMax = parseInt(document.getElementById('myNum01').value)
+                                                                 
+   for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+       if (myLoop * 2 > myMax){
+          myTemp += ' cool '
+       }
+       myTemp += 'Loop number: ' + myLoop + '<br>'
+     }
+     document.getElementById('myDiv01').innerHTML = myTemp
+}">
+    
+    <div id="myDiv01">...</div>    
+    
+    
+  </body>
+</html>
