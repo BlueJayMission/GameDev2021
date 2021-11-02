@@ -16,7 +16,7 @@ V.0.0.1
   
 Max Array Entry: <input type=text id="myText01" value="3"><br>
   
-<input type=button  value="Example onClick" onClick="{
+<input type=button value="Example onClick" onClick="{
    let myTemp = document.getElementById('myText01').value
    let mySum = ''
    document.getElementById('myDiv01').innerHTML = ' '
@@ -26,7 +26,7 @@ Max Array Entry: <input type=text id="myText01" value="3"><br>
    myArray[1] = 'Mary'
    myArray[2] = 'Zizzy'
 
-   for (let myLoop=0; myloop < myTemp; myLoop++){
+   for (let myLoop=0;   myloop < myTemp; myLoop++){
       mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
    }
    document.getElementById('myDiv01').innerHTML = mySum
