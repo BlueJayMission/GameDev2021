@@ -1,3 +1,41 @@
 V.0.0.1
 
 <h2 align=center>T2A03-Classes-By-Adamk.html</h2>
+
+<a href="https://www.w3schools.com/Js/js_classes.asp" target="_self">https://www.w3schools.com/Js/js_classes.asp</a>
+Classes are both OBjects that store variables (Called properties) and Functions that work on the variables (Called Methods).
+
+<h4>Example classes code</h4>
+<pre>
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+       }
+      myDog = new myAnimal('Snickers',5)
+      myDog.myShow()
+      
+ </pre>
+
+
+<h4>Example working class code</h4>
+Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+ <input type=button value="Example Class Set and Show Class Animal" onClick="{
+  class myAnimal {
+     constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+       }
+    }  // end class myAnimal
+      myDog = new myAnimal('Snickers',5)
+      myDog.myShow()
+}">
+
+
+<div id="myDiv01">...</div>
+
