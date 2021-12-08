@@ -11,18 +11,18 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
-   myContext.lineWidth = 10;
-   myContext.strokeStyle = 'green';
+   myContext.lineWidth = 15;
+   myContext.strokeStyle = 'magenta';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
 }">
 
-<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+<input type=button value=".fillText('A Sentence', 400, 100)" onclick="{
    myContext.font = '20px Arial';
-   myContext.fillText('Hello World', 400, 100);
+   myContext.fillText('A Sentence', 400, 100);
    myContext.translate(400, 100);  
    myContext.rotate(60 * Math.PI / 180); 
-   myContext.fillText('Hello World', 10, 10);
+   myContext.fillText('A Sentence', 10, 10);
    myContext.stroke();
    myContext.resetTransform();  
    //myContext.rotate(-60 * Math.PI / 180); 
