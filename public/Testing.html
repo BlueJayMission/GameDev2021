@@ -3,8 +3,8 @@
    let myInterval
  
 function myIsOnScreen(){
-   if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
-     document.getElementById('myDiv01').style.left = '397px'
+   if (parseInt(document.getElementById('myImg01').style.left) > 400) {
+     document.getElementById('myImg01').style.left = '399px'
    }
 }
 
@@ -23,7 +23,19 @@ function myIsOnScreen(){
       } ,20)
    }
 }"> 
-
+<body onkeydown="{
+     let myKey = event.key
+ //  let myKey = String.toLowerCase(event.key)
+   if (myKey == 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.height = 
+             parseInt(document.getElementById('myImg01').style.height) + 3
+         myIsOnScreen()
+      } ,20)
+   }
+}"> 
 
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://t00.deviantart.net/iuG_PTEU8tQLXcFE4swf36WmZ0Q=/500x250/filters:fixed_height(100,100):origin()/pre00/8e2d/th/pre/f/2017/321/7/5/pixel_knight_by_piskelknight-dbu2liy.png">
 
