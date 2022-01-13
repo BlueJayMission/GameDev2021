@@ -1,5 +1,5 @@
 <html>
-<h6> Version 0.2.4</h6>
+<h6> Version 0.2.5</h6>
 
          <script type="text/javascript">
             //init object globally
@@ -14,29 +14,29 @@
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
-                        moveLeft('myImg01');
+                        moveLeft();
                         break;
                     case 38: //Up arrow key
-                        moveUp('myImg01');
+                        moveUp();
                         break;
                     case 39: //right arrow key
-                        moveRight('myImg01');
+                        moveRight();
                         break;
                     case 40: //down arrow key
-                        moveDown('myImg01');
+                        moveDown();
                         break;
                 }
             }
-            function moveLeft('myImg01') {
+            function moveLeft() {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
             }
-            function moveUp('myImg01') {
+            function moveUp() {
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
             }
-            function moveRight('myImg01') {
+            function moveRight() {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
             }
-            function moveDown('myImg01') {
+            function moveDown() {
                 objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
             }
             window.onload = init;
@@ -85,7 +85,7 @@ function myHitOther(myImg01,myImg02){
 
 
 function myCheckHit(){
-   if ( moveLeft('myImg01','myImg02') ){
+   if ( myHitOther('myImg01','myImg02') ){
        alert('you lose')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't2a13-keydown.html'  
