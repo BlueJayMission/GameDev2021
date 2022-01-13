@@ -14,29 +14,29 @@
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
-                        moveLeft();
+                        moveLeft('myImg01','myImg02');
                         break;
                     case 38: //Up arrow key
-                        moveUp();
+                        moveUp('myImg01','myImg02');
                         break;
                     case 39: //right arrow key
-                        moveRight();
+                        moveRight('myImg01','myImg02');
                         break;
                     case 40: //down arrow key
-                        moveDown();
+                        moveDown('myImg01','myImg02');
                         break;
                 }
             }
-            function moveLeft() {
+            function moveLeft('myImg01','myImg02') {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
             }
-            function moveUp() {
+            function moveUp('myImg01','myImg02') {
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
             }
-            function moveRight() {
+            function moveRight('myImg01','myImg02') {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
             }
-            function moveDown() {
+            function moveDown('myImg01','myImg02') {
                 objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
             }
             window.onload = init;
@@ -85,7 +85,7 @@ function myHitOther(myImg01,myImg02){
 
 
 function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
+   if ( moveLeft('myImg01','myImg02') ){
        alert('you lose')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't2a13-keydown.html'  
