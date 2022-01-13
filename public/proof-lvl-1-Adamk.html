@@ -1,5 +1,5 @@
 <html>
-<h6> Version 0.1.9</h6>
+<h6> Version 0.2.0</h6>
 
          <script type="text/javascript">
             //init object globally
@@ -28,16 +28,16 @@
                 }
             }
             function moveLeft() {
-                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) - 5 + "px" myCheckHit();
             }
             function moveUp() {
-                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+                objImage.style.top = parseInt(objImage.style.top) - 5 + "px" myCheckHit();
             }
             function moveRight() {
-                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+                objImage.style.left = parseInt(objImage.style.left) + 5 + "px" myCheckHit();
             }
             function moveDown() {
-                objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+                objImage.style.top = parseInt(objImage.style.top) + 5 + "px" myCheckHit();
             }
             window.onload = init;
         </script>
@@ -68,9 +68,9 @@
 
 function myHitOther(myImg01,myImg02){
    left1   = parseInt(objImage.style.left)
-   right1  = left1 + parseInt(objImage.style.left)
+   right1  = left1 + parseInt(objImage.style.width)
    top1    = parseInt(objImage.style.top)   
-   bottom1 = top1   + parseInt(objImage.style.top)
+   bottom1 = top1   + parseInt(objImage.style.height)
    left2   = parseInt(document.getElementById(myImg02).style.left)
    right2  = left2 + parseInt(document.getElementById(myImg02).style.width)
    top2    = parseInt(document.getElementById(myImg02).style.top)   
