@@ -14,29 +14,29 @@
                 var key_code = e.which || e.keyCode;
                 switch (key_code) {
                     case 37: //left arrow key
-                        moveLeft('myImg01','myImg02');
+                        moveLeft('myImg01');
                         break;
                     case 38: //Up arrow key
-                        moveUp('myImg01','myImg02');
+                        moveUp('myImg01');
                         break;
                     case 39: //right arrow key
-                        moveRight('myImg01','myImg02');
+                        moveRight('myImg01');
                         break;
                     case 40: //down arrow key
-                        moveDown('myImg01','myImg02');
+                        moveDown('myImg01');
                         break;
                 }
             }
-            function moveLeft('myImg01','myImg02') {
+            function moveLeft('myImg01') {
                 objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
             }
-            function moveUp('myImg01','myImg02') {
+            function moveUp('myImg01') {
                 objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
             }
-            function moveRight('myImg01','myImg02') {
+            function moveRight('myImg01') {
                 objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
             }
-            function moveDown('myImg01','myImg02') {
+            function moveDown('myImg01') {
                 objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
             }
             window.onload = init;
