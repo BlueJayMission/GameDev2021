@@ -1,3 +1,25 @@
+<script id="worker2" type="javascript/worker">
+self.onmessage = function(e) {
+  var data = e.data;
+
+  if (data.url) {
+    var url = data.url.href;
+    var index = url.indexOf('index.html');
+    if (index != -1) {
+      url = url.substring(0, index);
+    }
+    importScripts(url + 'engine.js');
+  }
+  ...
+};
+</script>
+<script>
+  var worker = new Worker(window.URL.createObjectURL(bb.getBlob()));
+  worker.postMessage({url: document.location});
+</script>
+
+
+
 self.addEventListener('message', function(e) {
   var data = e.data;
 onclick="{
