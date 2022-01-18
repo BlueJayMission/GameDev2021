@@ -1,18 +1,4 @@
-<script id="worker2" type="javascript/worker">
-self.onmessage = function(e) {
-  var data = e.data;
 
-  if (data.url) {
-    var url = data.url.href;
-    var index = url.indexOf('index.html');
-    if (index != -1) {
-      url = url.substring(0, index);
-    }
-    importScripts(url + 'engine.js');
-  }
-  ...
-};
-</script>
 <script>
   var worker = new Worker(window.URL.createObjectURL(bb.getBlob()));
   worker.postMessage({url: document.location});
@@ -22,14 +8,45 @@ self.onmessage = function(e) {
 
 self.addEventListener('message', function(e) {
   var data = e.data;
-onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}"
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3f6f528b-9c63-4fe8-9626-aafa748edaf5/db35qhj-ea72c51d-b0b7-4555-ac33-3592a554fb77.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zZjZmNTI4Yi05YzYzLTRmZTgtOTYyNi1hYWZhNzQ4ZWRhZjUvZGIzNXFoai1lYTcyYzUxZC1iMGI3LTQ1NTUtYWMzMy0zNTkyYTU1NGZiNzcucG5nIn1dXX0.2dJmAxPS7_MKCUL2IQ0bPNQc-oNz-hhrOO-6gL-aWV0">
+<body onkeydown="getKeyAndMove(event)">
+         <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://t00.deviantart.net/iuG_PTEU8tQLXcFE4swf36WmZ0Q=/500x250/filters:fixed_height(100,100):origin()/pre00/8e2d/th/pre/f/2017/321/7/5/pixel_knight_by_piskelknight-dbu2liy.png">        
+         <script type="text/javascript">
+            //init object globally
+            var objImage = null;
+            function init() {
+                objImage = document.getElementById("myImg01");
+                objImage.style.position = "relative";
+                objImage.style.left = "0px";
+                objImage.style.top = "0px";
+            }
+            function getKeyAndMove(e) {
+                var key_code = e.which || e.keyCode;
+                switch (key_code) {
+                    case 37: //left arrow key
+                        moveLeft();
+                        break;
+                    case 38: //Up arrow key
+                        moveUp();
+                        break;
+                    case 39: //right arrow key
+                        moveRight();
+                        break;
+                    case 40: //down arrow key
+                        moveDown();
+                        break;
+                }
+            }
+            function moveLeft() {
+                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+            }
+            function moveUp() {
+                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+            }
+            function moveRight() {
+                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+            }
+            function moveDown() {
+                objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+            }
+            window.onload = init;
+        </script>
