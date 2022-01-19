@@ -1,11 +1,14 @@
 <html>
-<h6> Version 0.3.7</h6>
+<h6> Version 0.3.8</h6>
 <head>
 <script>
      var worker = new Worker('Worker.js'); 
          </script>
-         
-
+<script>
+function receivedWorkerMessage(event) {
+  var primes = event.data;
+}         
+     </script>
          
     </head>     
 <input type=button value="Auto Background Left" onclick"background">
@@ -13,12 +16,7 @@
          <h1 align=center>Level 1</h1>
 <br><br><br><br>     
      
-<script>
-  function background() 
-   worker.addEventListener('message', function(e) {
-    document.getElementById('result').textContent = e.data;
-  }, false);       
- </script>
+
          
 <script>
 
