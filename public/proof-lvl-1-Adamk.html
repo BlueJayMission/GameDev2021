@@ -1,5 +1,5 @@
 <html>
-<h6> Version 0.4.5</h6>
+<h6> Version 0.4.6</h6>
 <head>
 <script>
   var worker;
@@ -8,13 +8,12 @@ function doSearch() {
      worker = new Worker('Worker.js'); 
      worker.onmessage = receivedWorkerMessage;
      var move = document.getElementById("move");
-      worker.postMessage(
-   { move: movedata
-}
-  );
+      worker.postMessage
 }     
      </script>
-
+<script>
+  var worker2 = new Worker('Worker2.js')
+  </script>
      <script>
 function receivedWorkerMessage(event) {
   var primes = event.data;
