@@ -1,10 +1,21 @@
 <html>
-<h6> Version 0.3.8</h6>
+<h6> Version 0.4.0</h6>
 <head>
 <script>
-     var worker = new Worker('Worker.js'); 
-         </script>
-<script>
+  var worker;
+
+function doSearch() {   
+     worker = new Worker('Worker.js'); 
+     worker.onmessage = receivedWorkerMessage;
+     var move = document.getElementById("move");
+      worker.postMessage(
+   { move: movedata
+}
+  );
+     
+     </script>
+
+     <script>
 function receivedWorkerMessage(event) {
   var primes = event.data;
 }         
