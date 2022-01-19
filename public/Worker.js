@@ -1,13 +1,10 @@
 
 <script>
-  var worker = new Worker(window.URL.createObjectURL(bb.getBlob()));
-  worker.postMessage({url: document.location});
+  var worker = new Worker('Worker.js')
+ 
 </script>
 
 
-
-self.addEventListener('message', function(e) {
-  var data = e.data;
 <body onkeydown="getKeyAndMove(event)">
          <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://t00.deviantart.net/iuG_PTEU8tQLXcFE4swf36WmZ0Q=/500x250/filters:fixed_height(100,100):origin()/pre00/8e2d/th/pre/f/2017/321/7/5/pixel_knight_by_piskelknight-dbu2liy.png">        
          <script type="text/javascript">
